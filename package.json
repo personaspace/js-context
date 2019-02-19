@@ -1,7 +1,7 @@
 {
-  "name": "@personaspace/server-acl",
+  "name": "@personaspace/context",
   "version": "0.1.0",
-  "description": "A package for checking resource ACLs on PersonaSpace servers.",
+  "description": "A package for resolving data mapping using context lists. It supports both node.js and browser environments.",
   "main": "lib/index.js",
   "directories": {
     "lib": "lib",
@@ -14,26 +14,23 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/personaspace/node-server-acl.git"
+    "url": "git+https://github.com/personaspace/js-context.git"
   },
   "keywords": [
     "PersonaSpace",
-    "ACL",
     "node",
+    "browser",
+    "context",
     "server"
   ],
   "author": "Eric L. Bentley",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/personaspace/node-server-acl/issues"
+    "url": "https://github.com/personaspace/js-context/issues"
   },
-  "homepage": "https://github.com/personaspace/node-server-acl#readme",
+  "homepage": "https://github.com/personaspace/js-context#readme",
   "devDependencies": {
     "intern": "^4.4.1",
     "standard": "^12.0.1"
-  },
-  "dependencies": {
-    "@personaspace/server-acl-middleware": "^0.1.0",
-    "deepmerge": "^3.2.0"
   }
 }
