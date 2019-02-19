@@ -1,0 +1,32 @@
+version: 2 # use CircleCI 2.0
+jobs: # a collection of steps
+  build: # runs not using Workflows must have a `build` job as entry point
+    working_directory: ~/ps-acl # directory where steps will run
+    docker:
+      - image: circleci/node:11.1.0
+    steps:
+      - checkout
+      - run:
+          name: update-npm
+          command: 'sudo npm install -g npm@latest'
+      - restore_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+      - run:
+          name: install-npm-wee
+          command: npm install
+      - run:
+          name: install-codecov
+          command: npm install codecov
+      - save_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+          paths:
+            - ./node_modules
+      - run:
+          name: test
+          command: npm test
+      - run:
+          name: upload-codecov
+          command: bash <(curl -s https://codecov.io/bash)
+      - store_artifacts:
+          path: test-results.xml
+          prefix: tests
