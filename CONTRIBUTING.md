@@ -103,9 +103,9 @@ $ npm test
 Make sure the linter is happy and that all tests pass.  Please, do not submit
 patches that fail either check.
 
-You can automatically fix linting errors, using `lint:fix` script.
+You can automatically fix linting errors, using the `format` script.
 ```sh
-$ npm run lint:fix
+$ npm run format
 ```
 
 ### Push commits
