@@ -1,15 +1,16 @@
-const makeContextKey = (context, mapTo) => {
-  let key = Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 3)
-  while (context[key]) {
-    key = Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 3)
+///  <reference path="./interfaces.ts" />
+export default (data: DataInterface, context:ContextInterface = {}): DataContextInterface => {
+  const newData = makeContextObject(data, context)
+
+  return {
+    data: newData,
+    context
   }
-  context[`${key}:`] = mapTo
-  return key
 }
 
-const makeContextObject = (data, context) => {
+function makeContextObject (data: any, context: ContextInterface): any {
   if (typeof data === 'string') {
-    if (data.indexOf('#') === -1) return data
+    if (data.indexOf('#') < 3) return data
     let index = data.indexOf('#')
     let prefix = data.substr(0, index + 1)
     let prop = data.substr(index + 1)
@@ -27,7 +28,7 @@ const makeContextObject = (data, context) => {
     return data
   }
 
-  const resolvedData = {}
+  const resolvedData: DataInterface = {}
   Object.keys(data).map(key => {
     const newKey = makeContextObject(key, context)
     resolvedData[newKey] = data[key]
@@ -39,13 +40,12 @@ const makeContextObject = (data, context) => {
   return resolvedData
 }
 
-const makeDataContext = (data, context = { '@:': '#/' }) => {
-  const newData = makeContextObject(data, context)
-
-  return {
-    data: newData,
-    context
+function makeContextKey (context: ContextInterface, mapTo: string): string {
+  let key = Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 3)
+  /* istanbul ignore if Cannot test randomness */
+  if (context[key]) {
+    return makeContextKey(context, mapTo)
   }
+  context[`${key}:`] = mapTo
+  return key
 }
-
-module.exports = makeDataContext
