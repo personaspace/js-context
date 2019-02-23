@@ -38,6 +38,9 @@ jobs: # a collection of steps
       - attach_workspace:
           at: ~/repo
       - run:
+          name: Build production
+          command: npm run build:prod
+      - run:
           name: Authenticate with npm registry
           command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/repo/.npmrc
       - run:

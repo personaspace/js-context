@@ -910,18 +910,18 @@ img { max-width: 100%; }
 <nav class="tsd-navigation secondary">
 	<ul>
 		<li class=" tsd-kind-interface">
-			<a href="interfaces/contextinterface.html" class="tsd-kind-icon">Context<wbr>Interface</a>
+			<a href="interfaces/icontextinterface.html" class="tsd-kind-icon">IContext<wbr>Interface</a>
 		</li>
 		<li class=" tsd-kind-interface">
-			<a href="interfaces/datacontextinterface.html" class="tsd-kind-icon">Data<wbr>Context<wbr>Interface</a>
+			<a href="interfaces/idatacontextinterface.html" class="tsd-kind-icon">IData<wbr>Context<wbr>Interface</a>
 		</li>
 		<li class=" tsd-kind-interface">
-			<a href="interfaces/datainterface.html" class="tsd-kind-icon">Data<wbr>Interface</a>
+			<a href="interfaces/idatainterface.html" class="tsd-kind-icon">IData<wbr>Interface</a>
 		</li>
-		<li class=" tsd-kind-function tsd-is-not-exported">
+		<li class=" tsd-kind-function">
 			<a href="globals.html#makecontextkey" class="tsd-kind-icon">make<wbr>Context<wbr>Key</a>
 		</li>
-		<li class=" tsd-kind-function tsd-is-not-exported">
+		<li class=" tsd-kind-function">
 			<a href="globals.html#makecontextobject" class="tsd-kind-icon">make<wbr>Context<wbr>Object</a>
 		</li>
 		<li class=" tsd-kind-function">
@@ -930,7 +930,7 @@ img { max-width: 100%; }
 		<li class=" tsd-kind-function">
 			<a href="globals.html#resolvedatacontext" class="tsd-kind-icon">resolve<wbr>Data<wbr>Context</a>
 		</li>
-		<li class=" tsd-kind-function tsd-is-not-exported">
+		<li class=" tsd-kind-function">
 			<a href="globals.html#resolverootreference" class="tsd-kind-icon">resolve<wbr>Root<wbr>Reference</a>
 		</li>
 	</ul>
@@ -947,15 +947,15 @@ img { max-width: 100%; }
 			<h2 id="installation">Installation</h2>
 			<p>Install <code>@personaspace/context</code> using npm.</p>
 			<pre><code><span class="hljs-built_in">npm</span> i @personaspace/context</code></pre><h2 id="usage">Usage</h2>
-			<pre><code class="language-js"><span class="hljs-keyword">const</span> { resolveDataContext, makeDataContext } = <span class="hljs-built_in">require</span>(<span class="hljs-string">'@personaspace/context'</span>)
+			<pre><code class="language-ts"><span class="hljs-keyword">import</span> { resolveDataContext, makeDataContext } = <span class="hljs-keyword">from</span> <span class="hljs-string">"@personaspace/context"</span>
 
-<span class="hljs-keyword">const</span> resource = <span class="hljs-string">'./ebntly/data/notes/test'</span>
-<span class="hljs-keyword">const</span> data = <span class="hljs-built_in">require</span>(<span class="hljs-string">`<span class="hljs-subst">${resource}</span>.json`</span>)[<span class="hljs-string">'@data'</span>]
-<span class="hljs-keyword">const</span> context = <span class="hljs-built_in">require</span>(<span class="hljs-string">`<span class="hljs-subst">${resource}</span>.json`</span>)[<span class="hljs-string">'@context'</span>]
+<span class="hljs-keyword">const</span> resource = <span class="hljs-string">"./ebntly/data/notes/test"</span>
+<span class="hljs-keyword">const</span> data = <span class="hljs-built_in">require</span>(<span class="hljs-string">`<span class="hljs-subst">${resource}</span>.json`</span>)[<span class="hljs-string">"@data"</span>]
+<span class="hljs-keyword">const</span> context = <span class="hljs-built_in">require</span>(<span class="hljs-string">`<span class="hljs-subst">${resource}</span>.json`</span>)[<span class="hljs-string">"@context"</span>]
 
 <span class="hljs-keyword">const</span> resolved = resolveDataContext(data, context)
 <span class="hljs-keyword">const</span> created = makeDataContext(data, {})
-<span class="hljs-comment">//  created.context will be different from the original context</span>
+<span class="hljs-comment">//  created.context may be different from the original context</span>
 </code></pre>
 			<h2 id="documentation">Documentation</h2>
 			<p>Documentation is located at <a href="https://personaspace.github.io/js-context">https://personaspace.github.io/js-context</a>. For issues with the documentation, please
@@ -978,19 +978,19 @@ img { max-width: 100%; }
 					<section class="tsd-index-section ">
 						<h3>Interfaces</h3>
 						<ul class="tsd-index-list">
-							<li class="tsd-kind-interface"><a href="interfaces/contextinterface.html" class="tsd-kind-icon">Context<wbr>Interface</a></li>
-							<li class="tsd-kind-interface"><a href="interfaces/datacontextinterface.html" class="tsd-kind-icon">Data<wbr>Context<wbr>Interface</a></li>
-							<li class="tsd-kind-interface"><a href="interfaces/datainterface.html" class="tsd-kind-icon">Data<wbr>Interface</a></li>
+							<li class="tsd-kind-interface"><a href="interfaces/icontextinterface.html" class="tsd-kind-icon">IContext<wbr>Interface</a></li>
+							<li class="tsd-kind-interface"><a href="interfaces/idatacontextinterface.html" class="tsd-kind-icon">IData<wbr>Context<wbr>Interface</a></li>
+							<li class="tsd-kind-interface"><a href="interfaces/idatainterface.html" class="tsd-kind-icon">IData<wbr>Interface</a></li>
 						</ul>
 					</section>
 					<section class="tsd-index-section ">
 						<h3>Functions</h3>
 						<ul class="tsd-index-list">
-							<li class="tsd-kind-function tsd-is-not-exported"><a href="globals.html#makecontextkey" class="tsd-kind-icon">make<wbr>Context<wbr>Key</a></li>
-							<li class="tsd-kind-function tsd-is-not-exported"><a href="globals.html#makecontextobject" class="tsd-kind-icon">make<wbr>Context<wbr>Object</a></li>
+							<li class="tsd-kind-function"><a href="globals.html#makecontextkey" class="tsd-kind-icon">make<wbr>Context<wbr>Key</a></li>
+							<li class="tsd-kind-function"><a href="globals.html#makecontextobject" class="tsd-kind-icon">make<wbr>Context<wbr>Object</a></li>
 							<li class="tsd-kind-function"><a href="globals.html#makedatacontext" class="tsd-kind-icon">make<wbr>Data<wbr>Context</a></li>
 							<li class="tsd-kind-function"><a href="globals.html#resolvedatacontext" class="tsd-kind-icon">resolve<wbr>Data<wbr>Context</a></li>
-							<li class="tsd-kind-function tsd-is-not-exported"><a href="globals.html#resolverootreference" class="tsd-kind-icon">resolve<wbr>Root<wbr>Reference</a></li>
+							<li class="tsd-kind-function"><a href="globals.html#resolverootreference" class="tsd-kind-icon">resolve<wbr>Root<wbr>Reference</a></li>
 						</ul>
 					</section>
 				</div>
@@ -998,148 +998,297 @@ img { max-width: 100%; }
 		</section>
 		<section class="tsd-panel-group tsd-member-group ">
 			<h2>Functions</h2>
-			<section class="tsd-panel tsd-member tsd-kind-function tsd-is-not-exported">
+			<section class="tsd-panel tsd-member tsd-kind-function">
 				<a name="makecontextkey" class="tsd-anchor"></a>
 				<h3>make<wbr>Context<wbr>Key</h3>
-				<ul class="tsd-signatures tsd-kind-function tsd-is-not-exported">
-					<li class="tsd-signature tsd-kind-icon">make<wbr>Context<wbr>Key<span class="tsd-signature-symbol">(</span>context<span class="tsd-signature-symbol">: </span><a href="interfaces/contextinterface.html" class="tsd-signature-type">ContextInterface</a>, mapTo<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+				<ul class="tsd-signatures tsd-kind-function">
+					<li class="tsd-signature tsd-kind-icon">make<wbr>Context<wbr>Key<span class="tsd-signature-symbol">(</span>context<span class="tsd-signature-symbol">: </span><a href="interfaces/icontextinterface.html" class="tsd-signature-type">IContextInterface</a>, mapTo<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
 				</ul>
 				<ul class="tsd-descriptions">
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/personaspace/js-context/blob/6292dc9/lib/index.ts#L138">index.ts:138</a></li>
+								<li>Defined in makeContextKey.ts:28</li>
 							</ul>
 						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Takes a context interface and returns randomly generated parameter key for the
+									schema URL and adds it to the current context being processed, mapping the
+								newly genereated key to the schema URL.</p>
+							</div>
+							<h3 id="example">Example</h3>
+							<pre><code class="language-ts"> <span class="hljs-keyword">import</span> { makeContextKey } <span class="hljs-keyword">from</span> <span class="hljs-string">"@personaspace/context/makeContextKey"</span>;
+
+ <span class="hljs-keyword">const</span> context = {<span class="hljs-string">"abc:"</span>: <span class="hljs-string">"https://example.com/test"</span>};
+ makeContextKey(context, <span class="hljs-string">"https://example.com/example"</span>);</code></pre>
+							<p><strong>Possible result of <code>console.log(context);</code></strong></p>
+							<pre><code class="language-json"> {
+     <span class="hljs-attr">"abc:"</span>: <span class="hljs-string">"https://example.com/test"</span>,
+     <span class="hljs-attr">"dha:"</span>: <span class="hljs-string">"https://example.com/example"</span>
+ }</code></pre>
+						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<ul class="tsd-parameters">
 							<li>
-								<h5>context: <a href="interfaces/contextinterface.html" class="tsd-signature-type">ContextInterface</a></h5>
+								<h5>context: <a href="interfaces/icontextinterface.html" class="tsd-signature-type">IContextInterface</a></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>IContextInterface The current context being processed.</p>
+								</div>
 							</li>
 							<li>
 								<h5>mapTo: <span class="tsd-signature-type">string</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>string The schema URL to parameterize.</p>
+								</div>
 							</li>
 						</ul>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+						<p>The newly generated parameter key.</p>
 					</li>
 				</ul>
 			</section>
-			<section class="tsd-panel tsd-member tsd-kind-function tsd-is-not-exported">
+			<section class="tsd-panel tsd-member tsd-kind-function">
 				<a name="makecontextobject" class="tsd-anchor"></a>
 				<h3>make<wbr>Context<wbr>Object</h3>
-				<ul class="tsd-signatures tsd-kind-function tsd-is-not-exported">
-					<li class="tsd-signature tsd-kind-icon">make<wbr>Context<wbr>Object<span class="tsd-signature-symbol">(</span>data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, context<span class="tsd-signature-symbol">: </span><a href="interfaces/contextinterface.html" class="tsd-signature-type">ContextInterface</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+				<ul class="tsd-signatures tsd-kind-function">
+					<li class="tsd-signature tsd-kind-icon">make<wbr>Context<wbr>Object<span class="tsd-signature-symbol">(</span>data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, context<span class="tsd-signature-symbol">: </span><a href="interfaces/icontextinterface.html" class="tsd-signature-type">IContextInterface</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+					<li class="tsd-signature tsd-kind-icon">make<wbr>Context<wbr>Object<span class="tsd-signature-symbol">(</span>data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, context<span class="tsd-signature-symbol">: </span><a href="interfaces/icontextinterface.html" class="tsd-signature-type">IContextInterface</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					<li class="tsd-signature tsd-kind-icon">make<wbr>Context<wbr>Object<span class="tsd-signature-symbol">(</span>data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span>, context<span class="tsd-signature-symbol">: </span><a href="interfaces/icontextinterface.html" class="tsd-signature-type">IContextInterface</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					<li class="tsd-signature tsd-kind-icon">make<wbr>Context<wbr>Object<span class="tsd-signature-symbol">(</span>data<span class="tsd-signature-symbol">: </span><a href="interfaces/idatainterface.html" class="tsd-signature-type">IDataInterface</a>, context<span class="tsd-signature-symbol">: </span><a href="interfaces/icontextinterface.html" class="tsd-signature-type">IContextInterface</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="interfaces/idatacontextinterface.html" class="tsd-signature-type">IDataContextInterface</a></li>
+					<li class="tsd-signature tsd-kind-icon">make<wbr>Context<wbr>Object<span class="tsd-signature-symbol">(</span>data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span>, context<span class="tsd-signature-symbol">: </span><a href="interfaces/icontextinterface.html" class="tsd-signature-type">IContextInterface</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></li>
 				</ul>
 				<ul class="tsd-descriptions">
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/personaspace/js-context/blob/6292dc9/lib/index.ts#L106">index.ts:106</a></li>
+								<li>Defined in makeContextObject.ts:71</li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Takes any data and processes it in reference to the context depending on
+								the type of data being passed and returns the contextualized data.</p>
+							</div>
+							<p><strong>string</strong></p>
+							<p>If an octothorpe (<code>#</code>) appears within the first 3 characters, then the string
+								is returned, otherwise everything before the <code>#</code> is contextualized using
+							<a href="globals.html#makecontextkey">makeContextKey</a> and replaced with the new parameterized prefix.</p>
+							<p><strong>plain object</strong></p>
+							<p>Plain-object keys are first processed and replaced by <code>makeContextObject</code>,
+							before processing and mapping its values.</p>
+							<p><strong>array</strong></p>
+							<p>Array values are mapped with <code>makeContextObject</code></p>
+							<p><strong>Everything else</strong></p>
+							<p>Any other value types other than what is above are simply returned without
+							change.</p>
+							<h3 id="example">Example</h3>
+							<pre><code class="language-ts"> <span class="hljs-keyword">import</span> { makeContextObject } <span class="hljs-keyword">from</span> <span class="hljs-string">"@personaspace/context/makeContextObject"</span>;
+
+ <span class="hljs-keyword">const</span> context = {<span class="hljs-string">"abc:"</span>: <span class="hljs-string">"https://example.com/test"</span>};
+ <span class="hljs-keyword">const</span> object = {
+     <span class="hljs-string">"https://example.com/test#name"</span>: <span class="hljs-string">"Sarai Pileo"</span>,
+     <span class="hljs-string">"https://example.com/test#id"</span>: <span class="hljs-number">7852345</span>,
+     <span class="hljs-string">"https://example.com/test#hasEmails"</span>: <span class="hljs-literal">true</span>,
+     <span class="hljs-string">"https://example.com/test#emails"</span>: [<span class="hljs-string">"#/~198236"</span>],
+     <span class="hljs-string">"https://example.com/example#address"</span>: {
+         <span class="hljs-string">"https://example.com/address#full"</span>: <span class="hljs-string">"..."</span>
+     }
+ };
+ <span class="hljs-keyword">const</span> result = makeContextObject(context, object);</code></pre>
+							<p><strong>Possible result of <code>console.log(result);</code></strong></p>
+							<pre><code class="language-json"> {
+     <span class="hljs-attr">"abc:name"</span>: <span class="hljs-string">"Sarai Pileo"</span>,
+     <span class="hljs-attr">"abc:id"</span>: <span class="hljs-number">7852345</span>,
+     <span class="hljs-attr">"abc:hasEmails"</span>: <span class="hljs-literal">true</span>,
+     <span class="hljs-attr">"abc:emails"</span>: [<span class="hljs-string">"#/~198236"</span>],
+     <span class="hljs-attr">"xwm:address"</span>: {
+         <span class="hljs-attr">"orx:full"</span>: <span class="hljs-string">"..."</span>
+     }
+ }</code></pre>
+							<p><strong>Possible result of <code>console.log(context);</code></strong></p>
+							<pre><code class="language-json"> {
+     <span class="hljs-attr">"abc:"</span>: <span class="hljs-string">"https://example.com/test"</span>,
+     <span class="hljs-attr">"xwm:"</span>: <span class="hljs-string">"https://example.com/example"</span>,
+     <span class="hljs-attr">"oxr:"</span>: <span class="hljs-string">"https://example.com/address"</span>
+ }</code></pre>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>data: <span class="tsd-signature-type">string</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>any The currently resolved data to contextualize.</p>
+								</div>
+							</li>
+							<li>
+								<h5>context: <a href="interfaces/icontextinterface.html" class="tsd-signature-type">IContextInterface</a></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>IContextInterface The initial context to use to contextualize data.</p>
+								</div>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+						<p>The contextualized data</p>
+					</li>
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in makeContextObject.ts:72</li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<ul class="tsd-parameters">
 							<li>
-								<h5>data: <span class="tsd-signature-type">any</span></h5>
+								<h5>data: <span class="tsd-signature-type">number</span></h5>
 							</li>
 							<li>
-								<h5>context: <a href="interfaces/contextinterface.html" class="tsd-signature-type">ContextInterface</a></h5>
+								<h5>context: <a href="interfaces/icontextinterface.html" class="tsd-signature-type">IContextInterface</a></h5>
 							</li>
 						</ul>
-						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+					</li>
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in makeContextObject.ts:73</li>
+							</ul>
+						</aside>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>data: <span class="tsd-signature-type">boolean</span></h5>
+							</li>
+							<li>
+								<h5>context: <a href="interfaces/icontextinterface.html" class="tsd-signature-type">IContextInterface</a></h5>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+					</li>
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in makeContextObject.ts:74</li>
+							</ul>
+						</aside>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>data: <a href="interfaces/idatainterface.html" class="tsd-signature-type">IDataInterface</a></h5>
+							</li>
+							<li>
+								<h5>context: <a href="interfaces/icontextinterface.html" class="tsd-signature-type">IContextInterface</a></h5>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <a href="interfaces/idatacontextinterface.html" class="tsd-signature-type">IDataContextInterface</a></h4>
+					</li>
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in makeContextObject.ts:75</li>
+							</ul>
+						</aside>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>data: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h5>
+							</li>
+							<li>
+								<h5>context: <a href="interfaces/icontextinterface.html" class="tsd-signature-type">IContextInterface</a></h5>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h4>
 					</li>
 				</ul>
 			</section>
 			<section class="tsd-panel tsd-member tsd-kind-function">
 				<a name="makedatacontext" class="tsd-anchor"></a>
-				<h3><span class="tsd-flag ts-flagConst">Const</span> make<wbr>Data<wbr>Context</h3>
+				<h3>make<wbr>Data<wbr>Context</h3>
 				<ul class="tsd-signatures tsd-kind-function">
-					<li class="tsd-signature tsd-kind-icon">make<wbr>Data<wbr>Context<span class="tsd-signature-symbol">(</span>data<span class="tsd-signature-symbol">: </span><a href="interfaces/datainterface.html" class="tsd-signature-type">DataInterface</a>, context<span class="tsd-signature-symbol">?: </span><a href="interfaces/contextinterface.html" class="tsd-signature-type">ContextInterface</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="interfaces/datacontextinterface.html" class="tsd-signature-type">DataContextInterface</a></li>
+					<li class="tsd-signature tsd-kind-icon">make<wbr>Data<wbr>Context<span class="tsd-signature-symbol">(</span>data<span class="tsd-signature-symbol">: </span><a href="interfaces/idatainterface.html" class="tsd-signature-type">IDataInterface</a>, context<span class="tsd-signature-symbol">?: </span><a href="interfaces/icontextinterface.html" class="tsd-signature-type">IContextInterface</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="interfaces/idatacontextinterface.html" class="tsd-signature-type">IDataContextInterface</a></li>
 				</ul>
 				<ul class="tsd-descriptions">
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/personaspace/js-context/blob/6292dc9/lib/index.ts#L97">index.ts:97</a></li>
+								<li>Defined in makeDataContext.ts:75</li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
 							<div class="lead">
-								<p>Takes resource data and a context and contextualizes the data, adding random contexts for schema URLs not mapped, and
-								returns the contextualized resource data and the complete context the data was contextualized with as a <a href="interfaces/datacontextinterface.html">DataContextInterface</a>.</p>
+								<p>Takes resource data and a context and contextualizes the data, adding random
+									contexts for schema URLs not mapped, and returns the contextualized resource
+									data and the complete context the data was contextualized with as a
+								<a href="interfaces/idatacontextinterface.html">IDataContextInterface</a>.</p>
 							</div>
-							<p><strong>Example</strong></p>
-							<pre><code class="language-ts"><span class="hljs-keyword">import</span> { makeDataContext } <span class="hljs-keyword">from</span> <span class="hljs-string">'@personaspace/context'</span>
+							<h3 id="example">Example</h3>
+							<pre><code class="language-ts"> <span class="hljs-keyword">import</span> { makeDataContext } <span class="hljs-keyword">from</span> <span class="hljs-string">"@personaspace/context"</span>;
 
-<span class="hljs-keyword">const</span> data = {
- <span class="hljs-string">'https://schema.personaspace.com/identity#name'</span>: <span class="hljs-string">'Eric L. Bentley'</span>,
- <span class="hljs-string">'https://schema.personaspace.com/identity#id'</span>: <span class="hljs-number">9467815246</span>,
- <span class="hljs-string">'https://schema.personaspace.com/identity#hasEmails'</span>: <span class="hljs-literal">true</span>,
- <span class="hljs-string">'https://schema.personaspace.com/identity#emails'</span>: [ <span class="hljs-string">'#/~12345'</span>, <span class="hljs-string">'#/~67890'</span> ],
- <span class="hljs-string">'https://schema.personaspace.com/identity#url'</span>: <span class="hljs-string">'#/profile'</span>,
- <span class="hljs-string">'~12345'</span>: <span class="hljs-string">'ebntly@example.com'</span>,
- <span class="hljs-string">'~67890'</span>: <span class="hljs-string">'e@example.com'</span>,
- <span class="hljs-string">'https://schema.personaspace.com/identity#address'</span>: {
-     <span class="hljs-string">'https://schema.personaspace.com/location#street'</span>: <span class="hljs-string">'12345 Main St'</span>,
-    <span class="hljs-string">'https://schema.personaspace.com/location#city'</span>: <span class="hljs-string">'Hometown'</span>,
-    <span class="hljs-string">'https://schema.personaspace.com/location#state'</span>: <span class="hljs-string">'LA'</span>,
-    <span class="hljs-string">'https://schema.personaspace.com/location#zip'</span>: <span class="hljs-string">'98765-4321'</span>
- },
- <span class="hljs-string">'https://example.com/schema/test#word'</span>: <span class="hljs-string">'Hello, world'</span>
-}
-
-<span class="hljs-keyword">const</span> context = {
- <span class="hljs-string">'id:'</span>: <span class="hljs-string">'https://schema.personaspace.com/identity#'</span>,
- <span class="hljs-string">'loc:'</span>: <span class="hljs-string">'https://schema.personaspace.com/location#'</span>
-}
-
-<span class="hljs-built_in">console</span>.log(makeDataContext(data, context))
-<span class="hljs-comment">//   Example result</span>
-<span class="hljs-comment">//   {</span>
-<span class="hljs-comment">//       data: {</span>
-<span class="hljs-comment">//           'id:name': 'Eric L. Bentley',</span>
-<span class="hljs-comment">//           'id:id': 9467815246,</span>
-<span class="hljs-comment">//           'id:hasEmails': true,</span>
-<span class="hljs-comment">//           'id:emails': [ '#/~12345', '#/~67890' ],</span>
-<span class="hljs-comment">//           'id:url': '#/profile',</span>
-<span class="hljs-comment">//           '~12345': 'ebntly@example.com',</span>
-<span class="hljs-comment">//           '~67890': 'e@example.com',</span>
-<span class="hljs-comment">//           'id:address': {</span>
-<span class="hljs-comment">//               'loc:street': '12345 Main St',</span>
-<span class="hljs-comment">//               'loc:city': 'Hometown',</span>
-<span class="hljs-comment">//               'loc:state': 'LA',</span>
-<span class="hljs-comment">//               'loc:zip': '98765-4321'</span>
-<span class="hljs-comment">//           },</span>
-<span class="hljs-comment">//           'xyh:word': 'Hello, world'</span>
-<span class="hljs-comment">//       },</span>
-<span class="hljs-comment">//       context: {</span>
-<span class="hljs-comment">//           'id:': 'https://schema.personaspace.com/identity#',</span>
-<span class="hljs-comment">//           'loc:': 'https://schema.personaspace.com/location#',</span>
-<span class="hljs-comment">//           'xyh:': 'https://example.com/schema/test#'</span>
-<span class="hljs-comment">//       }</span>
-<span class="hljs-comment">//   }</span>
-</code></pre>
+ <span class="hljs-keyword">const</span> data = {
+     <span class="hljs-string">"https://schema.personaspace.com/identity#name"</span>: <span class="hljs-string">"Eric L. Bentley"</span>,
+     <span class="hljs-string">"https://schema.personaspace.com/identity#id"</span>: <span class="hljs-number">9467815246</span>,
+     <span class="hljs-string">"https://schema.personaspace.com/identity#hasEmails"</span>: <span class="hljs-literal">true</span>,
+     <span class="hljs-string">"https://schema.personaspace.com/identity#emails"</span>: [
+         <span class="hljs-string">"#/~12345"</span>,
+         <span class="hljs-string">"#/~67890"</span>
+     ],
+     <span class="hljs-string">"https://schema.personaspace.com/identity#url"</span>: <span class="hljs-string">"#/profile"</span>,
+     <span class="hljs-string">"~12345"</span>: <span class="hljs-string">"ebntly@example.com"</span>,
+     <span class="hljs-string">"~67890"</span>: <span class="hljs-string">"e@example.com"</span>,
+     <span class="hljs-string">"https://schema.personaspace.com/identity#address"</span>: {
+         <span class="hljs-string">"https://schema.personaspace.com/location#street"</span>: <span class="hljs-string">"12345 Main St"</span>,
+         <span class="hljs-string">"https://schema.personaspace.com/location#city"</span>: <span class="hljs-string">"Hometown"</span>,
+         <span class="hljs-string">"https://schema.personaspace.com/location#state"</span>: <span class="hljs-string">"LA"</span>,
+         <span class="hljs-string">"https://schema.personaspace.com/location#zip"</span>: <span class="hljs-string">"98765-4321"</span>
+     },
+     <span class="hljs-string">"https://example.com/schema/test#word"</span>: <span class="hljs-string">"Hello, world"</span>
+ };
+ <span class="hljs-keyword">const</span> context = {
+     <span class="hljs-string">"id:"</span>: <span class="hljs-string">"https://schema.personaspace.com/identity#"</span>,
+     <span class="hljs-string">"loc:"</span>: <span class="hljs-string">"https://schema.personaspace.com/location#"</span>
+ };
+ <span class="hljs-keyword">const</span> result = makeDataContext(data, context)</code></pre>
+							<p><strong>Result of <code>console.log(result);</code></strong></p>
+							<pre><code class="language-json"> {
+     <span class="hljs-attr">"data"</span>: {
+         <span class="hljs-attr">"id:name"</span>: <span class="hljs-string">"Eric L. Bentley"</span>,
+         <span class="hljs-attr">"id:id"</span>: <span class="hljs-number">9467815246</span>,
+         <span class="hljs-attr">"id:hasEmails"</span>: <span class="hljs-literal">true</span>,
+         <span class="hljs-attr">"id:emails"</span>: [ <span class="hljs-string">"#/~12345"</span>, <span class="hljs-string">"#/~67890"</span> ],
+         <span class="hljs-attr">"id:url"</span>: <span class="hljs-string">"#/profile"</span>,
+         <span class="hljs-attr">"~12345"</span>: <span class="hljs-string">"ebntly@example.com"</span>,
+         <span class="hljs-attr">"~67890"</span>: <span class="hljs-string">"e@example.com"</span>,
+         <span class="hljs-attr">"id:address"</span>: {
+             <span class="hljs-attr">"loc:street"</span>: <span class="hljs-string">"12345 Main St"</span>,
+             <span class="hljs-attr">"loc:city"</span>: <span class="hljs-string">"Hometown"</span>,
+             <span class="hljs-attr">"loc:state"</span>: <span class="hljs-string">"LA"</span>,
+             <span class="hljs-attr">"loc:zip"</span>: <span class="hljs-string">"98765-4321"</span>
+         },
+         <span class="hljs-attr">"xyh:word"</span>: <span class="hljs-string">"Hello, world"</span>
+     },
+     <span class="hljs-attr">"context"</span>: {
+         <span class="hljs-attr">"id:"</span>: <span class="hljs-string">"https://schema.personaspace.com/identity#"</span>,
+         <span class="hljs-attr">"loc:"</span>: <span class="hljs-string">"https://schema.personaspace.com/location#"</span>,
+         <span class="hljs-attr">"xyh:"</span>: <span class="hljs-string">"https://example.com/schema/test#"</span>
+     }
+ }</code></pre>
 						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<ul class="tsd-parameters">
 							<li>
-								<h5>data: <a href="interfaces/datainterface.html" class="tsd-signature-type">DataInterface</a></h5>
+								<h5>data: <a href="interfaces/idatainterface.html" class="tsd-signature-type">IDataInterface</a></h5>
 								<div class="tsd-comment tsd-typography">
-									<div class="lead">
-										<p>DataInterface The data to contextualize with the <code>context</code> object.</p>
-									</div>
+									<p>IDataInterface The data to contextualize with the <code>context</code> object.</p>
 								</div>
 							</li>
 							<li>
-								<h5><span class="tsd-flag ts-flagDefault value">Default value</span> context: <a href="interfaces/contextinterface.html" class="tsd-signature-type">ContextInterface</a><span class="tsd-signature-symbol"> =&nbsp;{}</span></h5>
+								<h5><span class="tsd-flag ts-flagDefault value">Default value</span> context: <a href="interfaces/icontextinterface.html" class="tsd-signature-type">IContextInterface</a><span class="tsd-signature-symbol"> =&nbsp;{}</span></h5>
 								<div class="tsd-comment tsd-typography">
-									<div class="lead">
-										<p>ContextInterface The context to use to contextualize the <code>data</code> with.</p>
-									</div>
+									<p>IContextInterface The context to use to contextualize the <code>data</code> with.</p>
 								</div>
 							</li>
 						</ul>
-						<h4 class="tsd-returns-title">Returns <a href="interfaces/datacontextinterface.html" class="tsd-signature-type">DataContextInterface</a></h4>
+						<h4 class="tsd-returns-title">Returns <a href="interfaces/idatacontextinterface.html" class="tsd-signature-type">IDataContextInterface</a></h4>
 						<p>The data-context object that contains the contextualized data and the context it was created in.</p>
 					</li>
 				</ul>
@@ -1148,68 +1297,65 @@ img { max-width: 100%; }
 				<a name="resolvedatacontext" class="tsd-anchor"></a>
 				<h3><span class="tsd-flag ts-flagConst">Const</span> resolve<wbr>Data<wbr>Context</h3>
 				<ul class="tsd-signatures tsd-kind-function">
-					<li class="tsd-signature tsd-kind-icon">resolve<wbr>Data<wbr>Context<span class="tsd-signature-symbol">(</span>data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, context<span class="tsd-signature-symbol">: </span><a href="interfaces/contextinterface.html" class="tsd-signature-type">ContextInterface</a>, root<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					<li class="tsd-signature tsd-kind-icon">resolve<wbr>Data<wbr>Context<span class="tsd-signature-symbol">(</span>data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, context<span class="tsd-signature-symbol">: </span><a href="interfaces/icontextinterface.html" class="tsd-signature-type">IContextInterface</a>, root<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
 				</ul>
 				<ul class="tsd-descriptions">
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/personaspace/js-context/blob/6292dc9/lib/index.ts#L214">index.ts:214</a></li>
+								<li>Defined in resolveDataContext.ts:64</li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
 							<div class="lead">
 								<p>Takes contextualized resource data and a context and resolves the data to use fulle schema URLs.</p>
 							</div>
-							<p><strong>Example</strong></p>
-							<pre><code class="language-ts"><span class="hljs-keyword">import</span> { resolveDataContext } <span class="hljs-keyword">from</span> <span class="hljs-string">'@personaspace/context'</span>
+							<h3 id="example">Example</h3>
+							<pre><code class="language-ts"> <span class="hljs-keyword">import</span> { resolveDataContext } <span class="hljs-keyword">from</span> <span class="hljs-string">"@personaspace/context"</span>;
 
-<span class="hljs-keyword">const</span> data = {
- <span class="hljs-string">'id:name'</span>: <span class="hljs-string">'Eric L. Bentley'</span>,
- <span class="hljs-string">'id:id'</span>: <span class="hljs-number">9467815246</span>,
- <span class="hljs-string">'id:hasEmails'</span>: <span class="hljs-literal">true</span>,
- <span class="hljs-string">'id:emails'</span>: [ <span class="hljs-string">'#/~12345'</span>, <span class="hljs-string">'#/~67890'</span> ],
- <span class="hljs-string">'id:url'</span>: <span class="hljs-string">'#/profile'</span>,
- <span class="hljs-string">'~12345'</span>: <span class="hljs-string">'ebntly@example.com'</span>,
- <span class="hljs-string">'~67890'</span>: <span class="hljs-string">'e@example.com'</span>,
- <span class="hljs-string">'id:address'</span>: {
-     <span class="hljs-string">'loc:street'</span>: <span class="hljs-string">'12345 Main St'</span>,
-     <span class="hljs-string">'loc:city'</span>: <span class="hljs-string">'Hometown'</span>,
-     <span class="hljs-string">'loc:state'</span>: <span class="hljs-string">'LA'</span>,
-     <span class="hljs-string">'loc:zip'</span>: <span class="hljs-string">'98765-4321'</span>
- },
- <span class="hljs-string">'kwn:word'</span>: <span class="hljs-string">'Hello, world'</span>
-}
-
-<span class="hljs-keyword">const</span> context = {
- <span class="hljs-string">'id:'</span>: <span class="hljs-string">'https://schema.personaspace.com/identity#'</span>,
- <span class="hljs-string">'loc:'</span>: <span class="hljs-string">'https://schema.personaspace.com/location#'</span>,
- <span class="hljs-string">'kwn:'</span>: <span class="hljs-string">'https://example.com/schema/test#'</span>
-}
-
-<span class="hljs-built_in">console</span>.log(resolveDataContext(data, context))
-
-<span class="hljs-comment">//   Example result</span>
-<span class="hljs-comment">//   {</span>
-<span class="hljs-comment">//       'https://schema.personaspace.com/identity#name': 'Eric L. Bentley',</span>
-<span class="hljs-comment">//       'https://schema.personaspace.com/identity#id': 9467815246,</span>
-<span class="hljs-comment">//       'https://schema.personaspace.com/identity#hasEmails': true,</span>
-<span class="hljs-comment">//       'https://schema.personaspace.com/identity#emails': [</span>
-<span class="hljs-comment">//           'ebntly@example.com',</span>
-<span class="hljs-comment">//           'e@example.com'</span>
-<span class="hljs-comment">//       ],</span>
-<span class="hljs-comment">//       'https://schema.personaspace.com/identity#url': '#/profile',</span>
-<span class="hljs-comment">//       '~12345': 'ebntly@example.com',</span>
-<span class="hljs-comment">//       '~67890': 'e@example.com',</span>
-<span class="hljs-comment">//       'https://schema.personaspace.com/identity#address': {</span>
-<span class="hljs-comment">//           'https://schema.personaspace.com/location#street': '12345 Main St',</span>
-<span class="hljs-comment">//           'https://schema.personaspace.com/location#city': 'Hometown',</span>
-<span class="hljs-comment">//           'https://schema.personaspace.com/location#state': 'LA',</span>
-<span class="hljs-comment">//           'https://schema.personaspace.com/location#zip': '98765-4321'</span>
-<span class="hljs-comment">//       },</span>
-<span class="hljs-comment">//       'https://example.com/schema/test#word': 'Hello, world'</span>
-<span class="hljs-comment">//   }</span>
-</code></pre>
+ <span class="hljs-keyword">const</span> data = {
+     <span class="hljs-string">"id:name"</span>: <span class="hljs-string">"Eric L. Bentley"</span>,
+     <span class="hljs-string">"id:id"</span>: <span class="hljs-number">9467815246</span>,
+     <span class="hljs-string">"id:hasEmails"</span>: <span class="hljs-literal">true</span>,
+     <span class="hljs-string">"id:emails"</span>: [ <span class="hljs-string">"#/~12345"</span>, <span class="hljs-string">"#/~67890"</span> ],
+     <span class="hljs-string">"id:url"</span>: <span class="hljs-string">"#/profile"</span>,
+     <span class="hljs-string">"~12345"</span>: <span class="hljs-string">"ebntly@example.com"</span>,
+     <span class="hljs-string">"~67890"</span>: <span class="hljs-string">"e@example.com"</span>,
+     <span class="hljs-string">"id:address"</span>: {
+         <span class="hljs-string">"loc:street"</span>: <span class="hljs-string">"12345 Main St"</span>,
+         <span class="hljs-string">"loc:city"</span>: <span class="hljs-string">"Hometown"</span>,
+         <span class="hljs-string">"loc:state"</span>: <span class="hljs-string">"LA"</span>,
+         <span class="hljs-string">"loc:zip"</span>: <span class="hljs-string">"98765-4321"</span>
+     },
+     <span class="hljs-string">"kwn:word"</span>: <span class="hljs-string">"Hello, world"</span>
+ };
+ <span class="hljs-keyword">const</span> context = {
+     <span class="hljs-string">"id:"</span>: <span class="hljs-string">"https://schema.personaspace.com/identity#"</span>,
+     <span class="hljs-string">"loc:"</span>: <span class="hljs-string">"https://schema.personaspace.com/location#"</span>,
+     <span class="hljs-string">"kwn:"</span>: <span class="hljs-string">"https://example.com/schema/test#"</span>
+ };
+ <span class="hljs-keyword">const</span> result = resolveDataContext(data, context)</code></pre>
+							<p><strong>Result of <code>console.log(result)</code></strong></p>
+							<pre><code class="language-json">Example result
+ {
+     &quot;https://schema.personaspace.com/identity#name&quot;: &quot;Eric L. Bentley&quot;,
+     &quot;https://schema.personaspace.com/identity#id&quot;: 9467815246,
+     &quot;https://schema.personaspace.com/identity#hasEmails&quot;: true,
+     &quot;https://schema.personaspace.com/identity#emails&quot;: [
+         &quot;ebntly@example.com&quot;,
+         &quot;e@example.com&quot;
+     ],
+     &quot;https://schema.personaspace.com/identity#url&quot;: &quot;#/profile&quot;,
+     &quot;~12345&quot;: &quot;ebntly@example.com&quot;,
+     &quot;~67890&quot;: &quot;e@example.com&quot;,
+     &quot;https://schema.personaspace.com/identity#address&quot;: {
+         &quot;https://schema.personaspace.com/location#street&quot;: &quot;12345 Main St&quot;,
+         &quot;https://schema.personaspace.com/location#city&quot;: &quot;Hometown&quot;,
+         &quot;https://schema.personaspace.com/location#state&quot;: &quot;LA&quot;,
+         &quot;https://schema.personaspace.com/location#zip&quot;: &quot;98765-4321&quot;
+     },
+     &quot;https://example.com/schema/test#word&quot;: &quot;Hello, world&quot;
+ }</code></pre>
 						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<ul class="tsd-parameters">
@@ -1217,15 +1363,15 @@ img { max-width: 100%; }
 								<h5>data: <span class="tsd-signature-type">any</span></h5>
 								<div class="tsd-comment tsd-typography">
 									<div class="lead">
-										<p>DataInterface The contextualized data to resolve.</p>
+										<p>IDataInterface The contextualized data to resolve.</p>
 									</div>
 								</div>
 							</li>
 							<li>
-								<h5>context: <a href="interfaces/contextinterface.html" class="tsd-signature-type">ContextInterface</a></h5>
+								<h5>context: <a href="interfaces/icontextinterface.html" class="tsd-signature-type">IContextInterface</a></h5>
 								<div class="tsd-comment tsd-typography">
 									<div class="lead">
-										<p>ContextInterface The context to use to resolve the data with.</p>
+										<p>IContextInterface The context to use to resolve the data with.</p>
 									</div>
 								</div>
 							</li>
@@ -1233,7 +1379,7 @@ img { max-width: 100%; }
 								<h5><span class="tsd-flag ts-flagDefault value">Default value</span> root: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> =&nbsp;data</span></h5>
 								<div class="tsd-comment tsd-typography">
 									<div class="lead">
-										<p>DataInterface The root data that reference data may be stored.</p>
+										<p>IDataInterface The root data that reference data may be stored.</p>
 									</div>
 								</div>
 							</li>
@@ -1243,29 +1389,52 @@ img { max-width: 100%; }
 					</li>
 				</ul>
 			</section>
-			<section class="tsd-panel tsd-member tsd-kind-function tsd-is-not-exported">
+			<section class="tsd-panel tsd-member tsd-kind-function">
 				<a name="resolverootreference" class="tsd-anchor"></a>
-				<h3><span class="tsd-flag ts-flagConst">Const</span> resolve<wbr>Root<wbr>Reference</h3>
-				<ul class="tsd-signatures tsd-kind-function tsd-is-not-exported">
-					<li class="tsd-signature tsd-kind-icon">resolve<wbr>Root<wbr>Reference<span class="tsd-signature-symbol">(</span>data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, root<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+				<h3>resolve<wbr>Root<wbr>Reference</h3>
+				<ul class="tsd-signatures tsd-kind-function">
+					<li class="tsd-signature tsd-kind-icon">resolve<wbr>Root<wbr>Reference<span class="tsd-signature-symbol">(</span>data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, root<span class="tsd-signature-symbol">: </span><a href="interfaces/idatainterface.html" class="tsd-signature-type">IDataInterface</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
 				</ul>
 				<ul class="tsd-descriptions">
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/personaspace/js-context/blob/6292dc9/lib/index.ts#L148">index.ts:148</a></li>
+								<li>Defined in resolveRootReference.ts:24</li>
 							</ul>
 						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Takes a string and determines if it is a reference to a root property of
+									the resource data. IF so, it returns the value of that property. Otherwise,
+								it returns the string.</p>
+							</div>
+							<h3 id="example">Example</h3>
+							<pre><code class="language-ts"> <span class="hljs-keyword">import</span> { resolveRootReference } <span class="hljs-keyword">from</span> <span class="hljs-string">"@personaspace/context/resolveRootReference"</span>
+
+ <span class="hljs-keyword">const</span> data = {
+     <span class="hljs-string">"https://example.com/contact#email"</span>: [<span class="hljs-string">"#/~982644"</span>]
+     <span class="hljs-string">"~982644"</span>: <span class="hljs-string">"e@example.com"</span>
+ };
+ <span class="hljs-keyword">const</span> resolved = resolveRootReference(<span class="hljs-string">"#/~986244"</span>, data)
+ <span class="hljs-comment">//  resolved will be "e@example.com"</span></code></pre>
+						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<ul class="tsd-parameters">
 							<li>
-								<h5>data: <span class="tsd-signature-type">any</span></h5>
+								<h5>data: <span class="tsd-signature-type">string</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>string The string data to check for reference to root data.</p>
+								</div>
 							</li>
 							<li>
-								<h5><span class="tsd-flag ts-flagDefault value">Default value</span> root: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> =&nbsp;data</span></h5>
+								<h5>root: <a href="interfaces/idatainterface.html" class="tsd-signature-type">IDataInterface</a></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>IDataInterface The root data to reference.</p>
+								</div>
 							</li>
 						</ul>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+						<p>The referenced data or the string, if not a reference.</p>
 					</li>
 				</ul>
 			</section>
