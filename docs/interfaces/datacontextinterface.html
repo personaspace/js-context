@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>DataInterface | @personaspace/context</title>
+	<title>DataContextInterface | @personaspace/context</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,13 +56,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="../modules/_index_.html">&quot;index&quot;</a>
-				</li>
-				<li>
-					<a href="_index_.datainterface.html">DataInterface</a>
+					<a href="datacontextinterface.html">DataContextInterface</a>
 				</li>
 			</ul>
-			<h1>Interface DataInterface</h1>
+			<h1>Interface DataContextInterface</h1>
 		</div>
 	</div>
 </header>
@@ -72,7 +69,7 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>An object representing the data of a resource. It can represent either a resolved or contextualized data object.</p>
+						<p>An object representing a contextualized data object, with the context (<a href="contextinterface.html">ContextInterface</a>) it was created in.</p>
 					</div>
 				</div>
 			</section>
@@ -80,18 +77,56 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">DataInterface</span>
+						<span class="target">DataContextInterface</span>
 					</li>
 				</ul>
 			</section>
-			<section class="tsd-panel tsd-kind-interface tsd-parent-kind-external-module">
-				<h3 class="tsd-before-signature">Indexable</h3>
-				<div class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">[</span>key: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]: </span><span class="tsd-signature-type">any</span></div>
-				<div class="tsd-comment tsd-typography">
-					<div class="lead">
-						<p>A key/value pair representing a property value identified by its schema URL, parameterized (contextual) or full (resolved).</p>
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Properties</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="datacontextinterface.html#context" class="tsd-kind-icon">context</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="datacontextinterface.html#data" class="tsd-kind-icon">data</a></li>
+							</ul>
+						</section>
 					</div>
-				</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="context" class="tsd-anchor"></a>
+					<h3>context</h3>
+					<div class="tsd-signature tsd-kind-icon">context<span class="tsd-signature-symbol">:</span> <a href="contextinterface.html" class="tsd-signature-type">ContextInterface</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/personaspace/js-context/blob/1274a43/lib/index.ts#L33">index.ts:33</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The context that the data in the property <code>data</code> was contextualized in.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="data" class="tsd-anchor"></a>
+					<h3>data</h3>
+					<div class="tsd-signature tsd-kind-icon">data<span class="tsd-signature-symbol">:</span> <a href="datainterface.html" class="tsd-signature-type">DataInterface</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/personaspace/js-context/blob/1274a43/lib/index.ts#L29">index.ts:29</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The data of a resource that was contextualized by the context stored in the property <code>context</code>.</p>
+						</div>
+					</div>
+				</section>
 			</section>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
@@ -100,40 +135,45 @@
 					<li class="globals  ">
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
-					<li class="current tsd-kind-external-module">
-						<a href="../modules/_index_.html">"index"</a>
-					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
-						<a href="_index_.contextinterface.html" class="tsd-kind-icon">Context<wbr>Interface</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
-						<a href="_index_.datacontextinterface.html" class="tsd-kind-icon">Data<wbr>Context<wbr>Interface</a>
+					<li class=" tsd-kind-interface">
+						<a href="contextinterface.html" class="tsd-kind-icon">Context<wbr>Interface</a>
 					</li>
 				</ul>
 				<ul class="current">
-					<li class="current tsd-kind-interface tsd-parent-kind-external-module">
-						<a href="_index_.datainterface.html" class="tsd-kind-icon">Data<wbr>Interface</a>
+					<li class="current tsd-kind-interface">
+						<a href="datacontextinterface.html" class="tsd-kind-icon">Data<wbr>Context<wbr>Interface</a>
+						<ul>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="datacontextinterface.html#context" class="tsd-kind-icon">context</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="datacontextinterface.html#data" class="tsd-kind-icon">data</a>
+							</li>
+						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
-					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="../modules/_index_.html#makecontextkey" class="tsd-kind-icon">make<wbr>Context<wbr>Key</a>
+					<li class=" tsd-kind-interface">
+						<a href="datainterface.html" class="tsd-kind-icon">Data<wbr>Interface</a>
 					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="../modules/_index_.html#makecontextobject" class="tsd-kind-icon">make<wbr>Context<wbr>Object</a>
+					<li class=" tsd-kind-function tsd-is-not-exported">
+						<a href="../globals.html#makecontextkey" class="tsd-kind-icon">make<wbr>Context<wbr>Key</a>
 					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module">
-						<a href="../modules/_index_.html#makedatacontext" class="tsd-kind-icon">make<wbr>Data<wbr>Context</a>
+					<li class=" tsd-kind-function tsd-is-not-exported">
+						<a href="../globals.html#makecontextobject" class="tsd-kind-icon">make<wbr>Context<wbr>Object</a>
 					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module">
-						<a href="../modules/_index_.html#resolvedatacontext" class="tsd-kind-icon">resolve<wbr>Data<wbr>Context</a>
+					<li class=" tsd-kind-function">
+						<a href="../globals.html#makedatacontext" class="tsd-kind-icon">make<wbr>Data<wbr>Context</a>
 					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="../modules/_index_.html#resolverootreference" class="tsd-kind-icon">resolve<wbr>Root<wbr>Reference</a>
+					<li class=" tsd-kind-function">
+						<a href="../globals.html#resolvedatacontext" class="tsd-kind-icon">resolve<wbr>Data<wbr>Context</a>
+					</li>
+					<li class=" tsd-kind-function tsd-is-not-exported">
+						<a href="../globals.html#resolverootreference" class="tsd-kind-icon">resolve<wbr>Root<wbr>Reference</a>
 					</li>
 				</ul>
 			</nav>
