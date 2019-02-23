@@ -1,7 +1,7 @@
 {
     "suites": ["./_build/tests/unit/**/*.test.js"],
     "environments": ["node"],
-    "coverage": ["./_build/lib/**/*.js"],
+    "coverage": ["./_build/src/**/*.js"],
     "reporters": [
         "runner",
         {

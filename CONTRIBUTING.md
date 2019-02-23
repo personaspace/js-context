@@ -4,25 +4,25 @@ We thank you for your interest in contributing to PersonaSpace and are appreciat
 
 ## Code of Conduct
 
-PersonaSpace has adopted a code of conduct that all contributors are expected to adhere to. Please read the [CODE_OF_CONDUCT](https://github.com/personaspace/node-server-acl/blob/master/CODE_OF_CONDUCT.md) in order to understand hat will and will not be tolerated.
+PersonaSpace has adopted a code of conduct that all contributors are expected to adhere to. Please read the [CODE_OF_CONDUCT](https://github.com/personaspace/js-context/blob/master/CODE_OF_CONDUCT.md) in order to understand hat will and will not be tolerated.
 
 ## Guide
 For a smooth contribution process, please follow the following instructions.
 
 ### Fork
 
-Fork the project [on GitHub](https://github.com/personaspace/node-server-acl) and check out
+Fork the project [on GitHub](https://github.com/personaspace/js-context) and check out
 your copy.
 
 ```sh
-$ git clone git@github.com:your_username/node-server-acl.git
+$ git clone git@github.com:your_username/js-context.git
 $ cd node
-$ git remote add upstream git://github.com/personaspace/node-server-acl.git
+$ git remote add upstream git://github.com/personaspace/js-context.git
 ```
 
 ### Branch
 
-Okay, so you have decided on the proper branch.  Create a feature branch
+Okay, so you have decided on the proper branch. Create a feature branch
 and start hacking:
 
 ```sh
@@ -42,7 +42,9 @@ $ git config --global user.email your_emailaddress
 $ git config --global user.signedkey your_commit_signature
 ```
 
-For help on creating and getting your sommit signature, check out [Signing Commits](https://help.github.com/articles/signing-commits/) on Github User Documentation.
+For help on creating and getting your sommit signature, check out 
+[Signing Commits](https://help.github.com/articles/signing-commits/) on Github
+User Documentation.
 
 Writing good commit logs is important.  A commit log should describe what
 changed and why.  Follow these guidelines when writing one:
@@ -74,7 +76,8 @@ run `git shortlog` or `git log --oneline`.
 Check the output of `git log --oneline files_that_you_changed` to find out
 what subsystem (or subsystems) your changes touch.
 
-PersonaSpace only accepts signed commits, so be sure to sign your commits and follow the commit practices above.
+PersonaSpace only accepts signed commits, so be sure to sign your commits and
+follow the commit practices above.
 
 ```
 $ git commit -S -m "your commit message..."
@@ -114,8 +117,8 @@ $ npm run format
 $ git push origin my-feature-branch
 ```
 
-Go to https://github.com/your_username/node-server-acl and select your feature branch.  Click
-the 'Pull Request' button and fill out the form.
+Go to https://github.com/your_username/js-context and select your feature branch.
+Click the 'Pull Request' button and fill out the form.
 
 Pull requests are usually reviewed within a few days.  If there are comments
 to address, apply your changes in a separate commit and push that to your

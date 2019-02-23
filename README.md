@@ -16,16 +16,16 @@ npm i @personaspace/context
 
 ## Usage
 
-```js
-const { resolveDataContext, makeDataContext } = require('@personaspace/context')
+```ts
+import { resolveDataContext, makeDataContext } = from "@personaspace/context"
 
-const resource = './ebntly/data/notes/test'
-const data = require(`${resource}.json`)['@data']
-const context = require(`${resource}.json`)['@context']
+const resource = "./ebntly/data/notes/test"
+const data = require(`${resource}.json`)["@data"]
+const context = require(`${resource}.json`)["@context"]
 
 const resolved = resolveDataContext(data, context)
 const created = makeDataContext(data, {})
-//  created.context will be different from the original context
+//  created.context may be different from the original context
 
 ```
 
