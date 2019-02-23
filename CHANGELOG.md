@@ -10,7 +10,7 @@ Added documentation https://personaspace.github.io/js-context.
 ## v0.3.1
 A stable-ish release, though not what we would consider production ready.
 
-## v0.3.5
+## v0.3.6
 A much more stable release that publishes a package that returns JavaScript
 with TypeScript typings.
 
