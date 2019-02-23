@@ -30,7 +30,8 @@ const created = makeDataContext(data, {})
 ```
 
 ## Documentation
-Documentation is located at https://personaspace.github.io/js-context.
+Documentation is located at https://personaspace.github.io/js-context. For issues with the documentation, please 
+[Create a new issue](https://github.com/personaspace/js-context/issues/new).
 
 ## Contributing to PersonaSpace
 PersonaSpace is a large project and [contributors](https://github.com/personaspace/js-context/blob/master/CONTRIBUTORS.md) are welcome. Thank you for your support and efforts!
