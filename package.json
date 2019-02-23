@@ -1,8 +1,8 @@
 {
   "name": "@personaspace/context",
-  "version": "0.3.5",
+  "version": "0.3.6",
   "description": "A package for resolving data mapping using context lists. It supports both node.js and browser environments.",
-  "main": "lib/index.ts",
+  "main": "lib/index.js",
   "types": "types/index.d.ts",
   "files": [
     "./lib/**/*",
