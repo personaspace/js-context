@@ -1,14 +1,18 @@
 {
   "name": "@personaspace/context",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A package for resolving data mapping using context lists. It supports both node.js and browser environments.",
   "main": "lib/index.ts",
-  "files": ["./lib/**/*"],
+  "files": [
+    "./lib/**/*"
+  ],
   "scripts": {
     "test": "npm run build && intern",
     "lint": "eslint lib/**/*.ts tests/**/*.ts",
     "format": "eslint lib/**/*.ts tests/**/*.ts --fix",
-    "build": "npm run lint && tsc"
+    "build": "npm run lint && tsc",
+    "preversion": "npm test && npm run docs",
+    "docs": "typedoc --out docs --theme minimal /lib"
   },
   "repository": {
     "type": "git",
