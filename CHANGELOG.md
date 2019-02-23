@@ -7,5 +7,5 @@ Update to use TypeScript
 ## v0.2.4
 Added documentation https://personaspace.github.io/js-context.
 
-## v0.3.0
+## v0.3.1
 A stable-ish release, though not what we would consider production ready.

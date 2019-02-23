@@ -16,9 +16,6 @@ jobs: # a collection of steps
       - run:
           name: Install package
           command: npm install
-      - run:
-          name: Install codecov
-          command: npm install codecov
       - save_cache:
           key: dependency-cache-{{ checksum "package.json" }}
           paths:
