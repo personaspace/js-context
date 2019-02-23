@@ -1,4 +1,4 @@
-# PersonaSpace Node.js Server ACL
+# PersonaSpace Context
 [![CircleCI](https://circleci.com/gh/personaspace/js-context/tree/master.svg?style=svg)](https://circleci.com/gh/personaspace/js-context/tree/master)
 [![codecov](https://codecov.io/gh/personaspace/js-context/branch/master/graph/badge.svg)](https://codecov.io/gh/personaspace/js-context)
 [![Known Vulnerabilities](https://snyk.io/test/github/personaspace/js-context/master/badge.svg?targetFile=package.json)](https://snyk.io/test/github/personaspace/js-context/master?targetFile=package.json)
