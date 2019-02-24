@@ -1,9 +1,11 @@
 version: 2 # use CircleCI 2.0
+defaults: &defaults
+  working_directory: ~/repo
+  docker:
+    - image: circleci/node:11.1.0
 jobs: # a collection of steps
-  build: # runs not using Workflows must have a `build` job as entry point
-    working_directory: ~/ps-acl # directory where steps will run
-    docker:
-      - image: circleci/node:11.1.0
+  test:
+    <<: *defaults
     steps:
       - checkout
       - run:
@@ -12,21 +14,50 @@ jobs: # a collection of steps
       - restore_cache:
           key: dependency-cache-{{ checksum "package.json" }}
       - run:
-          name: install-npm-wee
+          name: Install package
           command: npm install
-      - run:
-          name: install-codecov
-          command: npm install codecov
       - save_cache:
           key: dependency-cache-{{ checksum "package.json" }}
           paths:
             - ./node_modules
       - run:
-          name: test
+          name: Run tests
           command: npm test
       - run:
-          name: upload-codecov
+          name: Codecov upload
           command: bash <(curl -s https://codecov.io/bash)
       - store_artifacts:
           path: test-results.xml
           prefix: tests
+      - persist_to_workspace:
+          root: ~/repo
+          paths: .
+  deploy:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: ~/repo
+      - run:
+          name: Build production
+          command: npm run build:prod
+      - run:
+          name: Authenticate with npm registry
+          command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/repo/.npmrc
+      - run:
+          name: Publish package
+          command: npm publish
+          
+workflows:
+  version: 2
+  test-deploy:
+    jobs:
+      - test
+      - deploy:
+          requires:
+            - test
+          filters:
+            tags:
+              only: /^v.*/
+            branches:
+              only:
+                - master

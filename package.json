@@ -1,16 +1,21 @@
 {
   "name": "@personaspace/context",
-  "version": "0.1.0",
+  "version": "0.3.6",
   "description": "A package for resolving data mapping using context lists. It supports both node.js and browser environments.",
   "main": "lib/index.js",
-  "directories": {
-    "lib": "lib",
-    "test": "tests"
-  },
+  "types": "types/index.d.ts",
+  "files": [
+    "./lib/**/*",
+    "./types/**/*"
+  ],
   "scripts": {
-    "test": "npm run lint && intern",
-    "lint": "standard lib/**/*.js tests/**/*.js",
-    "lint:fix": "standard lib/**/*.js tests/**/*.js --fix"
+    "test": "npm run build && intern",
+    "lint": "tslint src/**/*.ts tests/**/*.ts",
+    "format": "tslint -c tslint.json src/**/*.ts tests/**/*.ts --fix",
+    "build": "npm run lint && tsc",
+    "build:prod": "npm run lint && tsc -p tsconfig.deploy.json",
+    "preversion": "npm test",
+    "docs": "typedoc --out docs --mode file --theme minimal src/"
   },
   "repository": {
     "type": "git",
@@ -31,6 +36,7 @@
   "homepage": "https://github.com/personaspace/js-context#readme",
   "devDependencies": {
     "intern": "^4.4.1",
-    "standard": "^12.0.1"
+    "tslint": "^5.12.1",
+    "typescript": "^3.3.3"
   }
 }

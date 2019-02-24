@@ -1,4 +1,4 @@
-# PersonaSpace Node.js Server ACL
+# PersonaSpace Context
 [![CircleCI](https://circleci.com/gh/personaspace/js-context/tree/master.svg?style=svg)](https://circleci.com/gh/personaspace/js-context/tree/master)
 [![codecov](https://codecov.io/gh/personaspace/js-context/branch/master/graph/badge.svg)](https://codecov.io/gh/personaspace/js-context)
 [![Known Vulnerabilities](https://snyk.io/test/github/personaspace/js-context/master/badge.svg?targetFile=package.json)](https://snyk.io/test/github/personaspace/js-context/master?targetFile=package.json)
@@ -16,18 +16,22 @@ npm i @personaspace/context
 
 ## Usage
 
-```js
-const { resolveDataContext, makeDataContext } = require('@personaspace/context')
+```ts
+import { resolveDataContext, makeDataContext } = from "@personaspace/context"
 
-const resource = './ebntly/data/notes/test'
-const data = require(`${resource}.json`)['@data']
-const context = require(`${resource}.json`)['@context']
+const resource = "./ebntly/data/notes/test"
+const data = require(`${resource}.json`)["@data"]
+const context = require(`${resource}.json`)["@context"]
 
 const resolved = resolveDataContext(data, context)
 const created = makeDataContext(data, {})
-//  created.context will be different from the original context
+//  created.context may be different from the original context
 
 ```
+
+## Documentation
+Documentation is located at https://personaspace.github.io/js-context. For issues with the documentation, please 
+[Create a new issue](https://github.com/personaspace/js-context/issues/new).
 
 ## Contributing to PersonaSpace
 PersonaSpace is a large project and [contributors](https://github.com/personaspace/js-context/blob/master/CONTRIBUTORS.md) are welcome. Thank you for your support and efforts!

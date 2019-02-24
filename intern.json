@@ -1,8 +1,7 @@
 {
-    "suites": "tests/unit/**/*.test.js",
-    "functionalSuites": "tests/functional/**/*.js",
-    "environments": ["node", "node"],
-    "coverage": ["tests/unit/**/*.test.js"],
+    "suites": ["./_build/tests/unit/**/*.test.js"],
+    "environments": ["node"],
+    "coverage": ["./_build/src/**/*.js"],
     "reporters": [
         "runner",
         {
